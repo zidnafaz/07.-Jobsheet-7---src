@@ -26,7 +26,7 @@ public class WhileGaji18 {
             System.out.println("- Manager");
             System.out.println("- Karyawan");
             System.out.println("______________________________________");
-            System.out.print("Masukkan jabatan karyawan ke-" + (i+1) + " : ");
+            System.out.print("Masukkan jabatan karyawan ke-" + (i+1) + "  : ");
             jabatan = sc18.next();
 
             System.out.print("Masukkan jumlah jam lembur      : ");
@@ -41,9 +41,9 @@ public class WhileGaji18 {
                 gajiLembur = jumlahJamLembur * 75000;
             }
 
+            totalGajiLembur += gajiLembur;
+            System.out.println("Total gaji lembur               : " + totalGajiLembur);
         }
         
-        totalGajiLembur += gajiLembur;
-        System.out.println("Total gaji lembur               : " + totalGajiLembur);
     }
 }
