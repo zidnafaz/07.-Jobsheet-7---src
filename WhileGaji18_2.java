@@ -28,10 +28,10 @@ public class WhileGaji18_2 {
             System.out.println("______________________________________");
             System.out.print("Masukkan jabatan karyawan ke-" + (i+1) + "  : ");
             jabatan = sc18.next();
-            i++;
-
+            
             System.out.print("Masukkan jumlah jam lembur      : ");
             jumlahJamLembur = sc18.nextInt();
+            i++;
             
             if (jabatan.equalsIgnoreCase("Direktur")) {
                 continue;
@@ -42,11 +42,12 @@ public class WhileGaji18_2 {
             } else {
                 System.out.println("Jabatan invalid");
                 i--;
+                gajiLembur = jumlahJamLembur * 0;
             }
             
             totalGajiLembur += gajiLembur;
-            System.out.println("Total gaji lembur               : " + totalGajiLembur);
         }
         
+        System.out.println("Total gaji lembur               : " + totalGajiLembur);
     }
 }
