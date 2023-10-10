@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class WhileGaji18 {
+public class WhileGaji18_2 {
     public static void main(String[] args) {
         
         Scanner sc18 = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class WhileGaji18 {
         jumlahKaryawan = sc18.nextInt();
 
         int i = 0;
-
+        
         while (i < jumlahKaryawan) {
             
             System.out.println("\nPilihan jabatan");
@@ -28,22 +28,25 @@ public class WhileGaji18 {
             System.out.println("______________________________________");
             System.out.print("Masukkan jabatan karyawan ke-" + (i+1) + "  : ");
             jabatan = sc18.next();
+            i++;
 
             System.out.print("Masukkan jumlah jam lembur      : ");
             jumlahJamLembur = sc18.nextInt();
-            i++;
-
+            
             if (jabatan.equalsIgnoreCase("Direktur")) {
                 continue;
             } else if (jabatan.equalsIgnoreCase("Manager")) {
                 gajiLembur = jumlahJamLembur * 100000;
             } else if (jabatan.equalsIgnoreCase("Karyawan")) {
                 gajiLembur = jumlahJamLembur * 75000;
+            } else {
+                System.out.println("Jabatan invalid");
+                i--;
             }
-
+            
             totalGajiLembur += gajiLembur;
+            System.out.println("Total gaji lembur               : " + totalGajiLembur);
         }
         
-        System.out.println("Total gaji lembur               : " + totalGajiLembur);
     }
 }
